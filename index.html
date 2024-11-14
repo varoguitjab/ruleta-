@@ -9,7 +9,7 @@
 <script>
   function refrescar() 
   {
-    var text = document.getElementById('input-frase').value;
+    var text = document.getElementById('input-frase').value.toUpperCase();
     document.getElementById('input-frase').value = '';
     var parent = document.getElementById("section-texto");
     parent.innerHTML = '';
@@ -25,7 +25,7 @@
   function comprobar() 
   {
     var text = document.getElementById('input-frase').value;
-    var letra = document.getElementById('input-letra').value;
+    var letra = document.getElementById('input-letra').value.toUpperCase();
     
     for (let i = 0; i < text.length; i++) {                  
       if(letra == text[i])
