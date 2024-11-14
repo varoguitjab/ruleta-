@@ -11,8 +11,7 @@
   function refrescar() 
   {
     text = document.getElementById('input-frase').value.toUpperCase();
-    document.getElementById('input-frase').value = '';
-    console.log(text);
+    document.getElementById('input-frase').value = '';    
     var parent = document.getElementById("section-texto");
     parent.innerHTML = '';
     for (let i = 0; i < text.length; i++) {            
@@ -25,9 +24,9 @@
     }
   }
   function comprobar() 
-  {    
-    console.log(text);
+  {        
     var letra = document.getElementById('input-letra').value.toUpperCase();
+    document.getElementById('input-letra').value = '';
     
     for (let i = 0; i < text.length; i++) {                  
       if(letra == text[i])
@@ -39,6 +38,9 @@
   #section-texto > input {
     width: 1.5em;
   }
-  
+
+  #input-letra{
+    width: 1.5em;
+  }
   
 </style>
