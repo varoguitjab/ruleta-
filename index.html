@@ -1,16 +1,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <h1>RULETA</h1>
 <input id="input-frase" type="password">
-<button id="btn-update-frase" onclick="refrescar()">Boton</button>
+<button id="btn-update-frase" onclick="refrescar()">Generar</button>
 <input id="input-letra" maxlength="1" type="text">
 <button id="btn-comprobar" onclick="comprobar()">Comprobar</button>
 <div id="section-texto">
 </div>
 <script>
+  var text = '';
   function refrescar() 
   {
-    var text = document.getElementById('input-frase').value.toUpperCase();
+    text = document.getElementById('input-frase').value.toUpperCase();
     document.getElementById('input-frase').value = '';
+    console.log(text);
     var parent = document.getElementById("section-texto");
     parent.innerHTML = '';
     for (let i = 0; i < text.length; i++) {            
@@ -23,8 +25,8 @@
     }
   }
   function comprobar() 
-  {
-    var text = document.getElementById('input-frase').value;
+  {    
+    console.log(text);
     var letra = document.getElementById('input-letra').value.toUpperCase();
     
     for (let i = 0; i < text.length; i++) {                  
