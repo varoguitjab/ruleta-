@@ -2,7 +2,7 @@
 <h1>RULETA</h1>
 <input id="input-frase" type="password">
 <button id="btn-update-frase" onclick="refrescar()">Boton</button>
-<input id="input-letra" type="text">
+<input id="input-letra" maxlength="1" type="text">
 <button id="btn-comprobar" onclick="comprobar()">Comprobar</button>
 <div id="section-texto">
 </div>
@@ -16,6 +16,7 @@
       var input = document.createElement("input");
       input.setAttribute('type', 'text');      
       input.setAttribute('id', 'letra-'+i);
+      input.setAttribute('maxlength', '1);
       parent.appendChild(input);
     }
   }
