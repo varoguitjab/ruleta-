@@ -4,9 +4,9 @@
 <div>
 <h1 id="title">RULETA</h1>
 <input id="input-frase" type="password">
-<button type="button" class="btn-primary" id="btn-update-frase" onclick="refrescar()">Generar</button>
-<input id="input-letra" maxlength="1" type="text">
-<button type="button" class="btn-primary" id="btn-comprobar" onclick="comprobar()">Comprobar</button>
+<button type="button" class="btn btn-primary" id="btn-update-frase" onclick="refrescar()">Generar</button>
+<input id="input-letra" maxlength="1" type="text" class="d-none">
+<button type="button" class="btn btn-primary d-none" id="btn-comprobar" onclick="comprobar()">Comprobar</button>
 <div id="section-texto">
 </div>
 </div>
@@ -16,6 +16,12 @@
   function refrescar() 
   {
     text = document.getElementById('input-frase').value.toUpperCase();
+    if(text)
+    {
+      document.getElementById('input-frase').classList.remove('d-none');    
+      document.getElementById('btn-comprobar').classList.remove('d-none');    
+    }
+
     document.getElementById('input-frase').value = '';    
     var parent = document.getElementById("section-texto");
     parent.innerHTML = '';
