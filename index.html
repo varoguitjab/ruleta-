@@ -3,8 +3,10 @@
 <body>
 <div>
 <h1 id="title">RULETA</h1>
-<input id="input-frase" type="password">
-<button type="button" class="btn btn-primary" id="btn-update-frase" onclick="refrescar()">Generar</button>
+<div id="form-guess">
+  <input class="form-control" id="input-frase" type="password">
+  <button type="button" class="btn btn-primary" id="btn-update-frase" onclick="refrescar()">Generar</button>
+</div>
 <input id="input-letra" maxlength="1" type="text" class="d-none">
 <button type="button" class="btn btn-primary d-none" id="btn-comprobar" onclick="comprobar()">Comprobar</button>
 <div id="section-texto">
@@ -69,6 +71,10 @@
 
   #input-letra{
     width: 1.5em;
+  }
+  
+  #form-guess{
+    display: flex;
   }
   
 </style>
