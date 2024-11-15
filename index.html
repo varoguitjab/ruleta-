@@ -17,10 +17,7 @@
   {
     text = document.getElementById('input-frase').value.toUpperCase();
     if(text)
-    {
-      document.getElementById('input-frase').classList.remove('d-none');    
-      document.getElementById('btn-comprobar').classList.remove('d-none');    
-    }
+      guessMode();
 
     document.getElementById('input-frase').value = '';    
     var parent = document.getElementById("section-texto");
@@ -43,6 +40,15 @@
       if(letra == text[i])
         document.getElementById("letra-"+i).value = letra;    
     }
+  
+  function guessMode()
+  {
+      document.getElementById('input-letra').classList.remove('d-none');    
+      document.getElementById('btn-comprobar').classList.remove('d-none');    
+      document.getElementById('input-frase').classList.add('d-none');    
+      document.getElementById('btn-update-frase').classList.add('d-none');    
+  }
+
   }
 </script>
 <style>
