@@ -34,6 +34,7 @@
   function comprobar() 
   {        
     var letra = document.getElementById('input-letra').value.toUpperCase();
+    document.getElementById('input-letra').focus();
     document.getElementById('input-letra').value = '';
     
     for (let i = 0; i < text.length; i++) {                  
