@@ -27,9 +27,8 @@
     var parent = document.getElementById("section-texto");
     parent.innerHTML = '';
     for (let i = 0; i < text.length; i++) {            
-      var input = createLetter();
-      if(text[i] == ' ')
-        input.setAttribute('visibility', 'hidden');      
+      var input = createLetter(i);
+      
       parent.appendChild(input);
     }
   }
@@ -53,6 +52,8 @@
       input.setAttribute('id', 'letra-'+i);
       input.setAttribute('maxlength', 1);
       input.setAttribute('disabled', '');      
+      if(text[i] == ' ')
+        input.setAttribute('visibility', 'hidden');      
       return input;
       
   }
