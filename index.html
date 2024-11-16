@@ -27,11 +27,7 @@
     var parent = document.getElementById("section-texto");
     parent.innerHTML = '';
     for (let i = 0; i < text.length; i++) {            
-      var input = document.createElement("input");
-      input.setAttribute('type', 'text');      
-      input.setAttribute('id', 'letra-'+i);
-      input.setAttribute('maxlength', 1);
-      input.setAttribute('disabled', '');      
+      var input = createLetter();
       parent.appendChild(input);
     }
   }
@@ -46,6 +42,17 @@
         document.getElementById("letra-"+i).value = letra;    
     }
   
+  }
+
+  function createLetter()
+  {
+      var input = document.createElement("input");
+      input.setAttribute('type', 'text');      
+      input.setAttribute('id', 'letra-'+i);
+      input.setAttribute('maxlength', 1);
+      input.setAttribute('disabled', '');      
+      return input;
+      
   }
   
   function guessMode()
