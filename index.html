@@ -28,6 +28,8 @@
     parent.innerHTML = '';
     for (let i = 0; i < text.length; i++) {            
       var input = createLetter();
+      if(text[i] == ' ')
+        input.setAttribute('visibility', 'hidden');      
       parent.appendChild(input);
     }
   }
